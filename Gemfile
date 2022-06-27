@@ -5,6 +5,10 @@ ruby "3.1.2"
 
 gem "devise"
 
+gem "devise-bootstrap-views"
+
+gem "sassc-rails"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
@@ -75,3 +79,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "noticed", "~> 1.5"
