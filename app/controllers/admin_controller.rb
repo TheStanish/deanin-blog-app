@@ -7,9 +7,11 @@ class AdminController < ApplicationController
   end
 
   def comments
+   
   end
 
   def users
+    
   end
 
   def show_post

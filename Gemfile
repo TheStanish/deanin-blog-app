@@ -79,3 +79,5 @@ end
 gem "noticed", "~> 1.5"
 
 gem "ransack"
+
+gem "friendly_id", "~> 5.4"
