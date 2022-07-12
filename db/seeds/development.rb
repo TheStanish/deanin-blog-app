@@ -13,7 +13,7 @@ tyler = User.first_or_create!(email: 'tyler@example.com',
                               last_name: 'Stanish',
                               role: User.roles[:admin])
 bibi = User.first_or_create!(email: 'bibi@example.com',
-                             password:'password',
+                             password: 'password',
                              password_confirmation: 'password',
                              first_name: 'Bibi',
                              last_name: 'Buzzsaw')
@@ -29,17 +29,23 @@ Address.first_or_create!(street: '123 Main St',
                          zip: 10001,
                          country: 'USA',
                          user: bibi)
+category = Category.first_or_create!(name: "Uncategorized", display_in_nav: true)
+Category.first_or_create!(name: "Cars", display_in_nav: false)
+Category.first_or_create!(name: "Bikes", display_in_nav: true)
+Category.first_or_create!(name: "Boats", display_in_nav: true)
+
 elapsed = Benchmark.measure do
   posts = []
   10.times do |x|
     puts "Creating post #{x}"
     post = Post.new(title: "Title #{x}",
                     body: "Body #{x} we got some words over here",
-                    user: bibi)
+                    user: tyler,
+                    category: category)
   5.times do |y|
     puts "Creating comment #{y} for post #{x}"
     post.comments.build(body: "Comment #{y}",
-                        user: tyler)
+                        user: bibi)
     end
     posts.push(post)
   end
