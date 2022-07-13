@@ -7,10 +7,12 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :notifications, as: :recipient, dependent: :destroy
 
+  has_one_attached :avatar
+
   has_one :address, dependent: :destroy, inverse_of: :user, autosave: true
   
   enum role: [:user, :admin]
-  after_initialize :set_default_role, :if => :new_record?
+  after_initialize :set_default_role, if: :new_record?
 
   # Class level accessor http://apidock.com/rails/Class/cattr_accessor
   cattr_accessor :form_steps do

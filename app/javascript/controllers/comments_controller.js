@@ -17,7 +17,6 @@ export default class extends Controller {
 
     form.classList.toggle("d-none");
     form.classList.toggle("mt-5");
-    const commentBody = document.getElementById(commentBodyID);
     commentBody.classList.toggle("d-none");
     this.toggleEditButton(editButton);
   }
