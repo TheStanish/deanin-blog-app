@@ -8,8 +8,8 @@ class CheckoutsController < ApplicationController
     @checkout_session = current_user
                         .payment_processor
                         .checkout(
-                          mode: 'payment',
-                          line_items: 'price_1LLCURK6ujX76fINKt31y9GK',
+                          mode: params[:payment_mode],
+                          line_items: params[:line_items],
                           success_url: checkout_success_url
                         )
   end
