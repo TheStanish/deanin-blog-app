@@ -183,6 +183,8 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
+    pay (4.0.1)
+      rails (>= 6.0.0)
     pg (1.4.1)
     public_suffix (4.0.7)
     puma (5.6.4)
@@ -232,6 +234,23 @@ GEM
     reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-rails (5.1.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.11.0)
     rubocop (1.31.2)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -285,6 +304,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
+    stripe (6.5.0)
     strscan (3.0.3)
     thor (1.2.1)
     tilt (2.0.10)
@@ -339,15 +359,18 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   noticed (~> 1.5)
+  pay (~> 4.0)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
   ransack
+  rspec-rails (~> 5.1.2)
   sassc-rails
   selenium-webdriver
   solargraph
   sprockets-rails
   stimulus-rails
+  stripe (~> 6.5)
   turbo-rails
   tzinfo-data
   web-console

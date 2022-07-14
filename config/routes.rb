@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     get 'admin/users'
     get 'admin/show_post/:id', to: 'admin#show_post', as: 'admin_post'
   end
+
+  get 'checkout', to: 'checkouts#show'
+  get 'checkout/success', to: 'checkouts#success'
+  get 'billing', to: 'billing#show'
+
   get 'search', to: 'search#index'
   
   devise_for :users, controllers: {

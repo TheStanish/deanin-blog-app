@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-    def home
+  def home
+    @portal_session = current_user.payment_processor.billing_portal
+  end
 
-    end
+  def about
 
-    def about
-
-    end
+  end
     
 
 end
